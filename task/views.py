@@ -7,7 +7,7 @@ class Tarefa(object):
     def __init__(self, titulo, data):
         self.titulo = titulo
         self.data = data
-        
+
     def __str__(self):
         return self.titulo
 
@@ -17,5 +17,5 @@ def home(request):
 def sobre(request):
     return HttpResponse("Clara Macêdo")
 
-def tarefa(request, ano, mes, dia):
-    return HttpResponse("Tarefa: "+str(dia)+"-"+str(mes)+"-"+str(ano))
+def tarefa(request, ano, mes, dia, minuto):
+    return HttpResponse("Tarefa: "+str(dia)+"-"+str(mes)+"-"+str(ano)+":"+str(minuto))
